@@ -1,5 +1,7 @@
 {
   "name": "CORE",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

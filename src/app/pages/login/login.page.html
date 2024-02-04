@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" (ngSubmit)="submit()" class="card-container">
+  <ion-card class="login-card">
+    <ion-card-header class="card-title">
+      <span>PORTAL</span>
+    </ion-card-header>
+    <ion-card-content class="card-content">
+      <div class="welcome-container">
+        <h4 class="welcome-title">Welcome!</h4>
+        <p class="welcome-subtitle">Please, login with your account.</p>
+      </div>
+      <div>
+        <ion-input *ngFor="let control of loginForm.controls | keyvalue"
+          label="{{control.key | titlecase}}" [formControlName]="control.key" 
+          (ionFocus)="control.value.value ? null : control.value.reset()"
+          [clearOnEdit]="false" errorText="This field is mandatory"
+          placeholder="Please, insert your {{control.key}}."
+          labelPlacement="floating" [type]="control.key">
+        </ion-input>
+        <ion-text color="danger" *ngIf="loginForm.errors && loginForm.errors['invalidUser']">Invalid user</ion-text>
+      </div>
+      <div>
+        <ion-button class="login-button" type="submit">Sign in</ion-button>
+        <a routerLink="/user/create">Don't have an account? Create one here!</a>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</form>
+<spinner *ngIf="loginForm.pending"></spinner>
+
+<custom-footer></custom-footer>
