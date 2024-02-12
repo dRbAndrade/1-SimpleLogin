@@ -1,30 +1,39 @@
-<form [formGroup]="loginForm" (ngSubmit)="submit()" class="card-container">
+<form [formGroup]="form" (ngSubmit)="submit()" class="card-container">
   <ion-card class="login-card">
     <ion-card-header class="card-title">
-      <span>PORTAL</span>
+      <span>{{isCreate? "Sign up" : "PORTAL"}}</span>
     </ion-card-header>
     <ion-card-content class="card-content">
-      <div class="welcome-container">
+      <div *ngIf="!isCreate" class="welcome-container">
         <h4 class="welcome-title">Welcome!</h4>
         <p class="welcome-subtitle">Please, login with your account.</p>
       </div>
       <div>
-        <ion-input *ngFor="let control of loginForm.controls | keyvalue"
-          label="{{control.key | titlecase}}" [formControlName]="control.key" 
-          (ionFocus)="control.value.value ? null : control.value.reset()"
-          [clearOnEdit]="false" errorText="This field is mandatory"
-          placeholder="Please, insert your {{control.key}}."
-          labelPlacement="floating" [type]="control.key">
-        </ion-input>
-        <ion-text color="danger" *ngIf="loginForm.errors && loginForm.errors['invalidUser']">Invalid user</ion-text>
+        <div class="input-wrapper" *ngFor="let control of form.controls | keyvalue : keepOrder">
+          <ion-input
+            [placeholder]="getPlaceholder(control.key)"
+            [label]="getLabel(control.key)"
+            [type]="getControlType(control.key)"
+            [errorText]="getErrorText(control.value.errors)"
+            [formControlName]="control.key"
+            labelPlacement="stacked"
+            [clearOnEdit]="false"
+            mode="ios">
+            <div class = "show-password-button" slot="end" *ngIf="control.key.includes('password')" >
+              <span class="slash" [class.visible]="showPassword"></span>
+              <ion-icon (click)="showPassword = !showPassword" name="eye-outline"/>
+            </div>
+          </ion-input>
+        </div>
+        <ion-text color="danger" *ngIf="form.errors && form.errors['invalidUser']">Invalid user</ion-text>
       </div>
       <div>
-        <ion-button class="login-button" type="submit">Sign in</ion-button>
-        <a routerLink="/user/create">Don't have an account? Create one here!</a>
+        <ion-button class="login-button" type="submit">Sign {{isCreate ? "up" : "in"}}</ion-button>
+        <a [routerLink]="isCreate ? '/login' : '/user/create'">{{isCreate ? "Already have an account? Sign in here!" : "Don't have an account? Sign up here!"}}</a>
       </div>
     </ion-card-content>
   </ion-card>
 </form>
-<spinner *ngIf="loginForm.pending"></spinner>
+<spinner *ngIf="form.pending"></spinner>
 
 <custom-footer></custom-footer>
