@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CustomMenuButtonComponent } from './custom-menu-button.component';
+import { CustomMenuButtonComponent } from './menu-button.component';
 
 describe('CustomMenuButtonComponent', () => {
   let component: CustomMenuButtonComponent;

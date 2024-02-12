@@ -1,11 +1,11 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'custom-menu-button',
-  templateUrl: './custom-menu-button.component.html',
-  styleUrls: ['./custom-menu-button.component.scss'],
+  selector: 'menu-button',
+  templateUrl: './menu-button.component.html',
+  styleUrls: ['./menu-button.component.scss'],
 })
-export class CustomMenuButtonComponent implements OnChanges{
+export class MenuButtonComponent implements OnChanges{
 
   @Input() status!:boolean;
   closed!: boolean;
