@@ -3,6 +3,4 @@ export type User = {
     password: string;
     email: string;
     phone: string;
-    active: boolean;
-    permissions: Map<string,number>
 }

@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "app": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "pt": {
+            "translation": "src/locale/messages.pt.xlf"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -35,6 +44,9 @@
             "scripts": ["node_modules/apexcharts/dist/apexcharts.min.js"]
           },
           "configurations": {
+            "pt": {
+              "localize": ["pt"]
+            },
             "production": {
               "budgets": [
                 {
@@ -73,6 +85,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "pt": {
+              "buildTarget": "app:build:development,pt"
+            },
             "production": {
               "buildTarget": "app:build:production"
             },

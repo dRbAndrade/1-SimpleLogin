@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5890833044137447416" datatype="html">
+        <source>Welcome!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8228092808673169363" datatype="html">
+        <source>Please, login with your account.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5325648582536528830" datatype="html">
+        <source>SIGN UP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6738143914028109021" datatype="html">
+        <source>PORTAL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7028204981963450021" datatype="html">
+        <source>Sign up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5207635742003539443" datatype="html">
+        <source>Sign in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8180897239180405581" datatype="html">
+        <source>Already have an account? Sign in here!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6217568605133342615" datatype="html">
+        <source>Don&apos;t have an account? Sign up here!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4686861026986588330" datatype="html">
+        <source>credential</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4809196861118879526" datatype="html">
+        <source>password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3325180562659478330" datatype="html">
+        <source>name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7315714079098881460" datatype="html">
+        <source>email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4425959074279579115" datatype="html">
+        <source>phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3330329515985411103" datatype="html">
+        <source>confirm password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4598612817209336502" datatype="html">
+        <source>Please, confirm your password.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1426285537420126760" datatype="html">
+        <source>Please, insert your email or phone number.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="576907280267504529" datatype="html">
+        <source>Please, insert your <x id="PH" equiv-text="control"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.page.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="510879027734114335" datatype="html">
+        <source>Nothing to see here.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.page.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

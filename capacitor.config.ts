@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.facturacore',
-  appName: 'CORE',
+  appId: 'com.drbandrade',
+  appName: 'Sipmle Login',
   webDir: 'www',
   server: {
     androidScheme: 'https'

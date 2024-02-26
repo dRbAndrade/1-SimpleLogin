@@ -1,13 +1,11 @@
-:host{
+ion-content::part(scroll){
+    display: flex;
     flex-direction: column;
-    background-image: url("../../../assets/images/login_1.png");
     background-repeat: no-repeat;
     background-size: auto 100%;
     justify-content: space-between;
     padding: 0 1rem;
 }
-
-:host,
 .card-container{
     display: flex;
     align-items: center;
@@ -21,7 +19,7 @@
     flex-direction: column;
     flex: 1;
     padding: 1.5rem;
-    max-width: 400px;
+    max-width: 333px;
     gap: 2.5vh;
 
     div{
@@ -100,26 +98,28 @@
 
 ion-icon{
     font-size: 24px;
-    cursor: pointer;
 }
 
 .show-password-button{
     position: relative;
     rotate: 45deg;
+    cursor: pointer;
 
     .slash{
         position: absolute;
-        top: 45%;
-        left: -10%;
-        height: 2px;
+        top: 40%;
+        left: -15%;
+        height: 4px;
         border-radius: 2px;
         width: 0;
         transition: width 0.15s;
+        border: 1px solid var(--ion-background-color);
+        z-index: 1;
         background-color:  var(--ion-card-color, var(--ion-item-color, var(--ion-color-step-550, #737373)));
     }
 
     .slash.visible{
-        width: 120%;
+        width: 130%;
     }
 
     ion-icon{

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">CORE</string>
-    <string name="title_activity_main">CORE</string>
-    <string name="package_name">com.facturacore</string>
-    <string name="custom_url_scheme">com.facturacore</string>
+    <string name="app_name">Ionic Learning</string>
+    <string name="title_activity_main">Ionic Learning</string>
+    <string name="package_name">com.ionlearning</string>
+    <string name="custom_url_scheme">com.ionlearning</string>
 </resources>

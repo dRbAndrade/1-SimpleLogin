@@ -1,4 +1,3 @@
-import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./not-found.page.scss'],
 })
 export class NotFoundPage {
-
-  constructor(private location: Location) { }
-
-  goBack(){
-    this.location.back();
-  }
 
 }

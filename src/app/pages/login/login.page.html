@@ -1,39 +1,37 @@
-<form [formGroup]="form" (ngSubmit)="submit()" class="card-container">
-  <ion-card class="login-card">
-    <ion-card-header class="card-title">
-      <span>{{isCreate? "Sign up" : "PORTAL"}}</span>
-    </ion-card-header>
-    <ion-card-content class="card-content">
-      <div *ngIf="!isCreate" class="welcome-container">
-        <h4 class="welcome-title">Welcome!</h4>
-        <p class="welcome-subtitle">Please, login with your account.</p>
-      </div>
-      <div>
-        <div class="input-wrapper" *ngFor="let control of form.controls | keyvalue : keepOrder">
-          <ion-input
-            [placeholder]="getPlaceholder(control.key)"
-            [label]="getLabel(control.key)"
-            [type]="getControlType(control.key)"
-            [errorText]="getErrorText(control.value.errors)"
-            [formControlName]="control.key"
-            labelPlacement="stacked"
-            [clearOnEdit]="false"
-            mode="ios">
-            <div class = "show-password-button" slot="end" *ngIf="control.key.includes('password')" >
-              <span class="slash" [class.visible]="showPassword"></span>
-              <ion-icon (click)="showPassword = !showPassword" name="eye-outline"/>
-            </div>
-          </ion-input>
+<ion-content>
+  <form [formGroup]="form" class="card-container">
+    <ion-card class="login-card">
+      <ion-card-header class="card-title">{{cardTitle}}</ion-card-header>
+      <ion-card-content class="card-content">
+        <div *ngIf="!isCreate" class="welcome-container">
+          <h4 class="welcome-title" i18n>Welcome!</h4>
+          <p class="welcome-subtitle" i18n>Please, login with your account.</p>
         </div>
-        <ion-text color="danger" *ngIf="form.errors && form.errors['invalidUser']">Invalid user</ion-text>
-      </div>
-      <div>
-        <ion-button class="login-button" type="submit">Sign {{isCreate ? "up" : "in"}}</ion-button>
-        <a [routerLink]="isCreate ? '/login' : '/user/create'">{{isCreate ? "Already have an account? Sign in here!" : "Don't have an account? Sign up here!"}}</a>
-      </div>
-    </ion-card-content>
-  </ion-card>
-</form>
+        <div>
+          <div class="input-wrapper" *ngFor="let control of form.controls | keyvalue : keepOrder">
+            <ion-input
+              [placeholder]="getPlaceholder(control.key)"
+              [label]="control.key | titlecase"
+              [type]="getControlType(control.key)"
+              [errorText]="getErrorText(control.value.errors)"
+              [formControlName]="control.key"
+              labelPlacement="stacked"
+              [clearOnEdit]="false"
+              mode="ios">
+              <div class="show-password-button" (click)="showPassword = !showPassword" slot="end" *ngIf="control.key.includes('password')" >
+                <span class="slash" [class.visible]="showPassword"></span>
+                <ion-icon name="eye-outline"/>
+              </div>
+            </ion-input>
+          </div>
+          <ion-text color="danger" *ngIf="form.errors && form.errors['dbError']">{{form.errors['dbError']}}</ion-text>
+        </div>
+        <div>
+          <ion-button class="login-button" type="submit">{{buttonText}}</ion-button>
+          <a [routerLink]="isCreate ? '/login' : '/user/create'">{{linkText}}</a>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
 <spinner *ngIf="form.pending"></spinner>
-
-<custom-footer></custom-footer>
