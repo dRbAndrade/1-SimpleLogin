@@ -9,7 +9,7 @@
         "locales": {
           "pt": {
             "translation": "src/locale/messages.pt.xlf",
-            "baseHref": "pt"
+            "baseHref": "pt/"
           }
         }
       },
