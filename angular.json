@@ -5,7 +5,7 @@
   "projects": {
     "app": {
       "i18n": {
-        "sourceLocale":"en-US",
+        "sourceLocale":"en",
         "locales": {
           "pt": {
             "translation": "src/locale/messages.pt.xlf",
