@@ -9,7 +9,7 @@
         "locales": {
           "pt": {
             "translation": "src/locale/messages.pt.xlf",
-            "baseHref": "1-SimpleLogin"
+            "baseHref": "/1-SimpleLogin/pt"
           }
         }
       },
@@ -29,6 +29,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "baseHref": "/1-SimpleLogin/en/",
             "assets": [
               {
                 "glob": "**/*",
