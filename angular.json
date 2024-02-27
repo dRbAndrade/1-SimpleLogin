@@ -9,7 +9,7 @@
         "locales": {
           "pt": {
             "translation": "src/locale/messages.pt.xlf",
-            "baseHref": ""
+            "baseHref": "1-SimpleLogin"
           }
         }
       },
