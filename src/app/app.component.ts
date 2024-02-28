@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,15 @@ export class AppComponent{
     private router: Router,
     private route: ActivatedRoute){
     this.route.queryParams.subscribe(params=>{
-      const redirectTo = params["redirectTo"];
-      if(redirectTo){
-        this.router.navigate([redirectTo]);
-      }else{
-        this.router.navigate(["login"]);
+      if(environment.production){
+        const redirectTo = params["redirectTo"];
+        console.log(redirectTo);
+        if(redirectTo){
+          this.router.navigate([redirectTo]);
+        }else{
+          this.router.navigate(["login"]);
+        }
       }
-      
     })
   }
 
