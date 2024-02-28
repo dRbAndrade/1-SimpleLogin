@@ -20,6 +20,10 @@ export class AppComponent{
         }else{
           this.router.navigate(["login"]);
         }
+      }else{
+        if(this.route.pathFromRoot.length===0){
+          this.router.navigate(["login"]);
+        };
       }
     })
   }
