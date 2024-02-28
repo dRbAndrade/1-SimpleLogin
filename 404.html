@@ -10,12 +10,12 @@
 <script>
     let path = window.location.href;
     const lang = navigator.language.substring(0,2);
-    if(/\/en\//.test(path)){
+    if(path.includes("/en/")){
         const splitPath = path.split("/en/");
-        path = `${splitPath[0]} + "/en/?redirectTo=${splitPath[1]}`;
-    } else if(/\/pt\//.test(path)){
+        path = `${splitPath[0]}/en/?redirectTo=${splitPath[1]}`;
+    } else if(path.includes("/pt/")){
         const splitPath = path.split("/pt/");
-        path = `${splitPath[0]} + "/pt/?redirectTo=${splitPath[1]}`;
+        path = `${splitPath[0]}/pt/?redirectTo=${splitPath[1]}`;
     } 
     else {
         switch(lang){
