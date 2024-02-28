@@ -10,20 +10,21 @@
 <script>
     let path = window.location.href;
     const lang = navigator.language.substring(0,2);
+    let url; 
     if(path.includes("/en/")){
         const splitPath = path.split("/en/");
-        path = `${splitPath[0]}/en/?redirectTo=${splitPath[1]}`;
+        url = new URL(`${splitPath[0]}/en/?redirectTo=${splitPath[1]}`);
     } else if(path.includes("/pt/")){
         const splitPath = path.split("/pt/");
-        path = `${splitPath[0]}/pt/?redirectTo=${splitPath[1]}`;
+        url = new URL(`${splitPath[0]}/pt/?redirectTo=${splitPath[1]}`);
     } 
     else {
         switch(lang){
-            case "pt": path+="pt/";break;
-            case "en": path+="en/";break;
-            default: path+="en/";
+            case "pt": url = new URL(path+"pt/");break;
+            case "en": url = new URL(path+"en/");break;
+            default: url = new URL(path+"en/");
         }
     }
-    window.location.replace(path);
+    window.location.replace(url);
 </script>
 </html>
