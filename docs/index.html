@@ -8,11 +8,19 @@
 <body>
 </body>
 <script>
-    const lang = navigator.language.substring(0,2);
     let path = window.location.href;
-    switch(lang){
-        case "pt": path+="pt/";break;
-        default: path+="en/";
+    const lang = navigator.language.substring(0,2);
+    if(path.includes("/en/")){
+        path = path.substring(0,path.indexOf("/en/")) + "/en/";
+    } else if(path.includes("/pt/")){
+        path = path.substring(0,path.indexOf("/pt/")) + "/pt/";
+    }
+    else {
+        switch(lang){
+            case "pt": path+="pt/";break;
+            case "en": path+="en/";break;
+            default: path+="en/";
+        }
     }
     window.location.replace(path);
 </script>
